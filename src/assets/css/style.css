@@ -1,4 +1,5 @@
 @import url("http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css");
 body {
   margin: 0;
   padding: 0;
@@ -26,17 +27,22 @@ body {
       #app-test .main-content .box-content.title {
         border: unset;
         margin-bottom: 10px; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 992px) {
         #app-test .main-content .box-content {
           -webkit-box-orient: vertical;
           -webkit-box-direction: reverse;
               -ms-flex-direction: column-reverse;
                   flex-direction: column-reverse;
-          border: unset; } }
+          border: unset;
+          -ms-flex-preferred-size: unset;
+              flex-basis: unset; } }
       #app-test .main-content .box-content .wrapper-content {
-        width: auto;
+        width: 100%;
         position: relative;
         padding: 2.5%; }
+        @media screen and (max-width: 992px) {
+          #app-test .main-content .box-content .wrapper-content {
+            width: auto; } }
       #app-test .main-content .box-content .content.title-box {
         font-weight: 1000; }
         #app-test .main-content .box-content .content.title-box h1 {
@@ -111,7 +117,14 @@ body {
             border: 1px solid rgba(25, 25, 25, 0.5); }
         #app-test .main-content .box-content .content.list-box .wrapper-two {
           width: 100%;
-          padding: 0 5px; }
+          padding: 0 5px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
           #app-test .main-content .box-content .content.list-box .wrapper-two input {
             width: auto;
             padding: 5px 10px;

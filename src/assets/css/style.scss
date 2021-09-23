@@ -1,5 +1,7 @@
 @import url('http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css');
-// @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
+
+// styles can be added here
 
 body {
     margin: 0;
@@ -29,15 +31,20 @@ body {
                 margin-bottom: 10px;
             }
 
-            @media screen and ( max-width: 768px ) {
+            @media screen and ( max-width: 992px ) {
                 flex-direction: column-reverse;
                 border: unset;
+                flex-basis: unset;
             }
 
             .wrapper-content {
-                width: auto;
+                width: 100%;
                 position: relative;
                 padding: 2.5%;
+
+                @media screen and ( max-width: 992px ) {
+                    width: auto;
+                }
             }
 
             .content {
@@ -129,6 +136,8 @@ body {
                     .wrapper-two {
                         width: 100%;
                         padding: 0 5px;
+                        display: flex;
+                        flex-direction: column;
                         input {
                             width: auto;
                             padding: 5px 10px;
