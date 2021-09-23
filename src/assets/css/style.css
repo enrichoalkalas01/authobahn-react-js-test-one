@@ -1,0 +1,148 @@
+@import url("http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+#app-test {
+  width: 100%;
+  height: auto;
+  position: relative; }
+  #app-test .main-content {
+    width: auto;
+    height: auto;
+    position: relative;
+    padding: 2.5%; }
+    #app-test .main-content .box-content {
+      width: auto;
+      height: auto;
+      position: relative;
+      border: 1px solid rgba(25, 25, 25, 0.5);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; }
+      #app-test .main-content .box-content.title {
+        border: unset;
+        margin-bottom: 10px; }
+      @media screen and (max-width: 768px) {
+        #app-test .main-content .box-content {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+              -ms-flex-direction: column-reverse;
+                  flex-direction: column-reverse;
+          border: unset; } }
+      #app-test .main-content .box-content .wrapper-content {
+        width: auto;
+        position: relative;
+        padding: 2.5%; }
+      #app-test .main-content .box-content .content.title-box {
+        font-weight: 1000; }
+        #app-test .main-content .box-content .content.title-box h1 {
+          margin: 0; }
+      #app-test .main-content .box-content .content.menu-box {
+        width: 100%;
+        padding: 15px 10px; }
+        #app-test .main-content .box-content .content.menu-box ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          #app-test .main-content .box-content .content.menu-box ul li {
+            width: 100%;
+            padding: 10px 5px;
+            border: 1px solid rgba(25, 25, 25, 0.5);
+            text-align: center;
+            cursor: pointer;
+            font-weight: 700; }
+            #app-test .main-content .box-content .content.menu-box ul li:hover, #app-test .main-content .box-content .content.menu-box ul li.active {
+              background-color: green;
+              -webkit-transition: all ease 1s;
+              transition: all ease 1s;
+              color: #fff; }
+      #app-test .main-content .box-content .content.content-data .content-box .wrapper-content-d {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 10px; }
+        #app-test .main-content .box-content .content.content-data .content-box .wrapper-content-d .icon-box {
+          width: 5%;
+          margin-right: 10px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start; }
+        #app-test .main-content .box-content .content.content-data .content-box .wrapper-content-d .desc-box {
+          width: 90%; }
+          #app-test .main-content .box-content .content.content-data .content-box .wrapper-content-d .desc-box .negative {
+            color: red;
+            font-weight: 700; }
+          #app-test .main-content .box-content .content.content-data .content-box .wrapper-content-d .desc-box .positive {
+            color: green;
+            font-weight: 700; }
+      #app-test .main-content .box-content .content.list-box {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end; }
+        #app-test .main-content .box-content .content.list-box .wrapper-one {
+          width: 100%;
+          padding: 0 5px; }
+          #app-test .main-content .box-content .content.list-box .wrapper-one select {
+            width: 100%;
+            padding: 5px 10px;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid rgba(25, 25, 25, 0.5); }
+        #app-test .main-content .box-content .content.list-box .wrapper-two {
+          width: 100%;
+          padding: 0 5px; }
+          #app-test .main-content .box-content .content.list-box .wrapper-two input {
+            width: auto;
+            padding: 5px 10px;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid rgba(25, 25, 25, 0.5); }
+      #app-test .main-content .box-content .content.list-wrapper-box {
+        padding: 20px 5px; }
+        #app-test .main-content .box-content .content.list-wrapper-box table {
+          width: 100%;
+          border-collapse: collapse; }
+          #app-test .main-content .box-content .content.list-wrapper-box table tr {
+            border: 1px solid rgba(25, 25, 25, 0.5); }
+            #app-test .main-content .box-content .content.list-wrapper-box table tr td {
+              padding: 5px 5px;
+              border: 0.1px solid rgba(25, 25, 25, 0.5);
+              margin: 0 !important;
+              font-weight: 700; }
+              #app-test .main-content .box-content .content.list-wrapper-box table tr td:nth-child(1) {
+                width: 75%; }
+              #app-test .main-content .box-content .content.list-wrapper-box table tr td:nth-child(2) {
+                width: 25%;
+                text-align: center; }
+            #app-test .main-content .box-content .content.list-wrapper-box table tr.data-list td {
+              background-color: green;
+              color: #fff; }
+            #app-test .main-content .box-content .content.list-wrapper-box table tr.last-child td {
+              background-color: white;
+              color: unset; }
+
+.ct-series.ct-series-b .ct-bar {
+  stroke: green; }
+
+/*# sourceMappingURL=style.css.map */
